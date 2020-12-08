@@ -81,7 +81,7 @@ export abstract class BaseService {
     if (user && user.name) return user.name;
 
     if (user && user.names && user.names.length > 0) {
-      for (let i = 0; i < user.names.length; i++) if (user.names[i].length > 0) return user.names[i];    
+      for (let i = 0; i < user.names.length; i++) if (user.names[i].length > 0) return user.names[i];
     }
 
     if (user && user.nickname && user.nickname.trim().length > 0) return user.nickname;
@@ -95,7 +95,7 @@ export abstract class BaseService {
     if (user && user.names && user.names.gls && user.names.gls.trim().length > 0) return user.names.gls;
 
     if (user && user.names && user.names.length > 0) {
-      for (let i = 0; i < user.names.length; i++) if (user.names[i].length > 0) return user.names[i];    
+      for (let i = 0; i < user.names.length; i++) if (user.names[i].length > 0) return user.names[i];
     }
 
     if (user && user.name) return user.name;
@@ -110,7 +110,7 @@ export abstract class BaseService {
 
     if (user && user.nickname) return user.nickname;
     if (user && user.names && user.names.length > 0) {
-      for (let i = 0; i < user.names.length; i++) if (user.names[i].length > 0) return user.names[i];    
+      for (let i = 0; i < user.names.length; i++) if (user.names[i].length > 0) return user.names[i];
     }
 
     return '';
@@ -145,7 +145,7 @@ export abstract class BaseService {
     if (type == 'fish') {
 		value = Math.round(Number(value));
 		let gests = value;
-  
+
 		let MINNOW = 1000000;
 		let CRUCIAN = 10000000;
 		let DOLPHIN = 100000000;
@@ -174,7 +174,7 @@ export abstract class BaseService {
     if (type == 'image') {
     	value = Math.round(Number(value));
 		let gests = value;
-  
+
 		let MINNOW = 1000000;
 		let CRUCIAN = 10000000;
 		let DOLPHIN = 100000000;
@@ -593,7 +593,7 @@ export abstract class BaseService {
   }
 
   getUsersSubscriptionsListProduction (params?: any): Observable<any> {
-    return this._http.post('https://stihi.io/api/v1/' + 'get_user_subscriptions_list', params, this.getHeaders()).pipe(
+    return this._http.post('https://stihi.io/api/v2/' + 'get_user_subscriptions_list', params, this.getHeaders()).pipe(
       tap(_ => () => {}),
       catchError(this.handleError<any>())
     );
