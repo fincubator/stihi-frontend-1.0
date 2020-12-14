@@ -1,7 +1,7 @@
 <div class="items-list__item" style="cursor: default;" *ngIf="isLoading">
   <!-- POST // -->
   <div class="post" style="text-align:center;display:inline-block;width:100%;cursor: default;">
-    <img src="/frontend_assets_stihi/img/loading.gif" style="height: 150px;">
+    <img src="/assets/frontend_assets_stihi/img/loading.gif" style="height: 150px;">
   </div>
 </div>
 <div class="items-list__item" *ngIf="!isLoading">
@@ -11,7 +11,7 @@
         <a href="/posts/{{o.id}}" (click)="openSinglePost(o.id, page)" class="js-form-popup">
           <ng-container *ngIf="o.image && o.image.length > 3">
             <div *ngIf="!isOffensiveFilter" [style.backgroundImage]="'url('+ o.image +')'" class="post__img"></div>
-            <div *ngIf="isOffensiveFilter" style="background: url('/frontend_assets_stihi/img/hqdefault.jpg')" class="post__img"></div>
+            <div *ngIf="isOffensiveFilter" style="background: url('/assets/frontend_assets_stihi/img/hqdefault.jpg')" class="post__img"></div>
           </ng-container>
 
           <ng-container *ngIf="!o.image || o.image.length < 3">
@@ -29,13 +29,13 @@
 
         <div class="post__right-block">
           <button class="post__block" (click)="banContent()" *ngIf="userRole == 'a'">
-            <img src="/frontend_assets_stihi/img/remove.png" alt="">
+            <img src="/assets/frontend_assets_stihi/img/remove.png" alt="">
           </button>
           <button class="comment__flag" *ngIf="TODO">
             <div class="simpleDropdown" [ngClass]="{'simpleDropdown--show': o.is_show_flag}">
 
                 <span class="simpleDropdown__target">
-                  <img src="/frontend_assets_stihi/img/flag.png" alt="" (click)="toggleFlag(o, !o.is_show_flag)" *ngIf="userId > 0">
+                  <img src="/assets/frontend_assets_stihi/img/flag.png" alt="" (click)="toggleFlag(o, !o.is_show_flag)" *ngIf="userId > 0">
                 </span>
 
               <div class="simpleDropdown__container simpleDropdown__container--right-top">

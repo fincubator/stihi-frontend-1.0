@@ -30,7 +30,7 @@
 
       <div class="avatar avatar--avatar-img-max-width61">
         <img class="avatar__avatar" src="{{object.user.avatar}}" alt="" *ngIf="object.user.avatar && object.user.avatar.length > 5">
-        <img class="avatar__avatar" src="/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!object.user.avatar || object.user.avatar.length < 5">
+        <img class="avatar__avatar" src="/assets/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!object.user.avatar || object.user.avatar.length < 5">
         <div class="avatar__user-right">
           <ng-container *ngIf="true || isRouted">
             <div class="simpleDropdown" [ngClass]="{'simpleDropdown--show': object.is_show_profile2}">
@@ -41,7 +41,7 @@
                 <div class="user">
                   <div class="user__header">
                     <div [style.backgroundImage]="'url('+ object.user.avatar +')'" class="user__left" *ngIf="object.user.avatar && object.user.avatar.length > 5"></div>
-                    <div [style.backgroundImage]="'url(/frontend_assets_stihi/img/avatar_default.png)'" class="user__left" *ngIf="!object.user.avatar || object.user.avatar.length < 5"></div>
+                    <div [style.backgroundImage]="'url(/assets/frontend_assets_stihi/img/avatar_default.png)'" class="user__left" *ngIf="!object.user.avatar || object.user.avatar.length < 5"></div>
 
                     <div class="user__right">
                       <div class="user__right-name"><a routerLink="/@{{object.displayNameLogin}}" class="user__right-id">{{object.displayName}}</a></div>
@@ -133,7 +133,7 @@
     <ng-container *ngIf="is_editing">
       <form (submit)="savePost(object.id)">
         <!-- BOX WHITE -->
-        
+
 
         <div class="box-white" style="padding: 5px 5px" *ngIf="false">
           <div class="box-white__form">
@@ -208,7 +208,7 @@
           <div class="box-white__form">
             <!-- FORM -->
             <div class="form">
-       
+
               <div style="display:inline-block;border-radius: 4px;border: thin solid #98929a;padding-top:8px; padding-bottom: 2px;margin-right: 40px;" class="image_editor_form">
               <div style="display: inline-block;height: 90px!important;overflow: hidden;">
                 <div style="display: flex;justify-content: center;align-content: center;flex-direction: column;width: 260px; height: 90px!important; overflow: hiden!important;cursor: pointer;" class="postImageContainer" (click)="focusPostImageField()">
@@ -227,7 +227,7 @@
               <div class="form__input" style="margin: 0px">
                 <!-- /INPUT -->
                 <div class="form__field-right">
-                <div (click)="object.content.isShowPreview = !object.content.isShowPreview" *ngIf="object.content.input_mode" class="editor_preview_button"><img src="/frontend_assets_stihi/img/eye.png" style="vertical-align: bottom"> <a href="javascript:void(0)" class="form__field-right-a" style="display: inline-block;width: 120px;text-align: left;">
+                <div (click)="object.content.isShowPreview = !object.content.isShowPreview" *ngIf="object.content.input_mode" class="editor_preview_button"><img src="/assets/frontend_assets_stihi/img/eye.png" style="vertical-align: bottom"> <a href="javascript:void(0)" class="form__field-right-a" style="display: inline-block;width: 120px;text-align: left;">
                   <ng-container *ngIf="!object.content.isShowPreview">Просмотреть
                   </ng-container>
                   <ng-container *ngIf="object.content.isShowPreview">Маркдаун
@@ -262,7 +262,7 @@
                           </div>
                           </ng-container>
                         </div>
-                      </div>                
+                      </div>
                     </ng-container>
 
                   <ng-container *ngIf="isEditorReady && !isMobile">
@@ -287,7 +287,7 @@
                       {{c.name}}
                     </option>
                   </select>
-                </div>                
+                </div>
                 <!-- /INPUT -->
               </div>
               <div class="form__input">
@@ -370,7 +370,7 @@
               <div class="form__input" style="margin: 0px">
                 <!-- /INPUT -->
                 <div class="form__field-right">
-                <div (click)="object.content.isShowPreview = !object.content.isShowPreview" *ngIf="object.content.input_mode" style="display: inline-block;margin-right: 300px;"><a href="javascript:void(0)" class="form__field-right-a"><img src="/frontend_assets_stihi/img/eye.png" style="vertical-align: bottom"> Просмотреть</a></div>
+                <div (click)="object.content.isShowPreview = !object.content.isShowPreview" *ngIf="object.content.input_mode" style="display: inline-block;margin-right: 300px;"><a href="javascript:void(0)" class="form__field-right-a"><img src="/assets/frontend_assets_stihi/img/eye.png" style="vertical-align: bottom"> Просмотреть</a></div>
                   <a class="form__field-right-a" href="javascript:void(0)" (click)="switchMode();" *ngIf="object.content.input_mode">Визуальный редактор</a>
                   <a class="form__field-right-a" href="javascript:void(0)" (click)="switchMode();" *ngIf="!object.content.input_mode">Markdown</a>
                 </div>
@@ -486,7 +486,7 @@
         <div class="" *ngIf="object.metadata.tags.length > 0" style="">
           <ng-container *ngFor="let o of object.metadata.tags">
             <div style="float: left;padding-top:5px">
-            <a routerLink="/@{{object.user.name}}/blog/{{o}}" class="tags-list__item" *ngIf="o != 'stihi-io' && o != ''">{{o}}</a>              
+            <a routerLink="/@{{object.user.name}}/blog/{{o}}" class="tags-list__item" *ngIf="o != 'stihi-io' && o != ''">{{o}}</a>
             </div>
           </ng-container>
         </div>
@@ -513,7 +513,7 @@
                             <div class="user">
                               <div class="user__header">
                                 <div [style.backgroundImage]="'url('+ object.user.avatar +')'" class="user__left" *ngIf="object.user.avatar && object.user.avatar.length > 5"></div>
-                                <div [style.backgroundImage]="'url(/frontend_assets_stihi/img/avatar_default.png)'" class="user__left" *ngIf="!object.user.avatar || object.user.avatar.length < 5"></div>
+                                <div [style.backgroundImage]="'url(/assets/frontend_assets_stihi/img/avatar_default.png)'" class="user__left" *ngIf="!object.user.avatar || object.user.avatar.length < 5"></div>
 
                                 <div class="user__right">
                                   <div class="user__right-name"><a routerLink="/@{{object.displayNameLogin}}" class="user__right-id">{{object.displayName}}</a></div>
@@ -725,7 +725,7 @@
               <div class="controls__price simpleDropdown simpleDropdown--show" style="display: inline-block;margin-right: 10px">
               <span class="simpleDropdown__target" (mouseenter)="showSharpayTooltip = true" (mouseleave)="showSharpayTooltip = false">
                 <a class="sharpay_widget_custom" title="Поделись и получи свои токены бесплатно" data-sharpay="fd422" [attr.data-image]="sharpayImage" style="width: 127px; cursor: pointer;display: inline-block;" (click)="openSharpay()">
-              <svg id="defaultSVG" style="display: block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.62 56.81"><defs></defs><path class="a" d="M273.81,28.08a10.1,10.1,0,0,0-3-1.38L269.59,32a1.76,1.76,0,0,1-1,1.29,6.26,6.26,0,0,1-2.74.42,10.55,10.55,0,0,1-2.31-.25,11.26,11.26,0,0,1-1.89-.61,7.3,7.3,0,0,1-1.45-.73,7.56,7.56,0,0,1-.85-.64h-.85l-1.17,5,.17.08a14,14,0,0,0,3.29,1c.58.11,1.18.19,1.78.26l-.85,3.67h5.66l.86-3.73a11.57,11.57,0,0,0,4.35-1.51,5.48,5.48,0,0,0,2.79-4.83A3.84,3.84,0,0,0,273.81,28.08Z" transform="translate(0 0)"></path><path class="a" d="M107.23,22.85a3.87,3.87,0,0,0-2.52.79,3.28,3.28,0,0,0-1.06,2.27h6.77a3.51,3.51,0,0,0-.8-2.24A3.14,3.14,0,0,0,107.23,22.85Z" transform="translate(0 0)"></path><path class="a" d="M273.76,19.32c-.41-.09-.83-.14-1.24-.19l.86-3.73h-5.66l-.82,3.72a11.3,11.3,0,0,0-4.39,1.54,5.53,5.53,0,0,0-2.77,4.88,4,4,0,0,0,1.4,3.09,8.94,8.94,0,0,0,3.2,1.57l1.13-4.9a7.08,7.08,0,0,1,.22-.75,1.54,1.54,0,0,1,.86-1,6.51,6.51,0,0,1,2.66-.41,9.74,9.74,0,0,1,3.16.52A9,9,0,0,1,275,25h.81l1.12-4.79-.17-.08A12.91,12.91,0,0,0,273.76,19.32Z" transform="translate(0 0)"></path><path class="a" d="M202.24,19.61a9.21,9.21,0,0,1-2.77,1.14,4.14,4.14,0,0,0-3.09-1.46,4.47,4.47,0,0,0-4.32,4.61v0a4.69,4.69,0,0,0,.08,1.06,11.92,11.92,0,0,1-8.88-4.81,4.36,4.36,0,0,0-.57,2.37,4.6,4.6,0,0,0,1.87,3.82,3.85,3.85,0,0,1-1.95-.57v.12A4.67,4.67,0,0,0,186,30.48a4.9,4.9,0,0,1-1.14.16,2.76,2.76,0,0,1-.81-.08,4.22,4.22,0,0,0,4,3.18,8.37,8.37,0,0,1-5.3,2,5.35,5.35,0,0,1-1.06-.08,11.65,11.65,0,0,0,6.6,2.12c7.9,0,12.22-7,12.22-13.12v-.57a9.62,9.62,0,0,0,2.28-2.6,6.57,6.57,0,0,1-2.44.73A4.61,4.61,0,0,0,202.24,19.61Z" transform="translate(0 0)"></path><path class="a" d="M67.9,29.82a2.5,2.5,0,0,0-1.18.7,1.71,1.71,0,0,0-.39,1.17,2.83,2.83,0,0,0,.09.82,1.09,1.09,0,0,0,.39.53,1.94,1.94,0,0,0,.77.42,5.74,5.74,0,0,0,1.49.13,4.49,4.49,0,0,0,1.62-.32,5.2,5.2,0,0,0,1.37-.79V29.22c-.68.06-1.41.14-2.19.23A12,12,0,0,0,67.9,29.82Z" transform="translate(0 0)"></path><path class="a" d="M291.28,0H8.34A8.33,8.33,0,0,0,0,8.34V48.47a8.33,8.33,0,0,0,8.32,8.34h283a8.33,8.33,0,0,0,8.34-8.32V8.34A8.33,8.33,0,0,0,291.28,0ZM32.9,36.21a12,12,0,0,1-6.81,1.71,19.39,19.39,0,0,1-4.3-.45,16.21,16.21,0,0,1-3.12-1l-.14-.07v-5h.91c.27.19.6.41,1,.64a9.75,9.75,0,0,0,1.53.73,12.81,12.81,0,0,0,2,.61,10.06,10.06,0,0,0,2.32.25,6,6,0,0,0,2.35-.34.92.92,0,0,0,.65-.86.74.74,0,0,0-.35-.72,6,6,0,0,0-1.7-.53q-.63-.13-1.68-.3a19.65,19.65,0,0,1-2-.4,7.19,7.19,0,0,1-3.67-2A5.1,5.1,0,0,1,18.67,25a5.23,5.23,0,0,1,2.5-4.41,11.62,11.62,0,0,1,6.7-1.72,17.61,17.61,0,0,1,3.83.4,15.74,15.74,0,0,1,2.86.87l.15.06v4.85h-.87a11.45,11.45,0,0,0-2.79-1.36,9.7,9.7,0,0,0-3.16-.53,5.88,5.88,0,0,0-2.2.36c-.78.31-.78.7-.78.83a.89.89,0,0,0,.33.76,5.19,5.19,0,0,0,1.88.61l1.84.33c.66.11,1.34.25,2,.42a6.6,6.6,0,0,1,3.41,1.9,4.88,4.88,0,0,1,1.12,3.26A5.35,5.35,0,0,1,32.9,36.21Zm23.91-10.5V37.43H50.67v-9a18.17,18.17,0,0,0-.11-2.09,4.15,4.15,0,0,0-.34-1.47,1.72,1.72,0,0,0-.8-.73,4.25,4.25,0,0,0-1.58-.24,4.68,4.68,0,0,0-1.48.24,7.92,7.92,0,0,0-1.54.7V37.38H38.69V12.58h6.13V21a14.2,14.2,0,0,1,2.53-1.53,7.53,7.53,0,0,1,3.17-.64,6.15,6.15,0,0,1,4.62,1.73A7.08,7.08,0,0,1,56.81,25.71Zm21.4-.43,0,12.15H72.11V35.82l-.73.53a8.29,8.29,0,0,1-1.31.79,8.53,8.53,0,0,1-1.77.58,11.19,11.19,0,0,1-2,.18A6.24,6.24,0,0,1,62,36.29a5.43,5.43,0,0,1-1.77-4.14,5.6,5.6,0,0,1,.91-3.28,6,6,0,0,1,2.54-2,13.76,13.76,0,0,1,3.94-1c1.47-.19,3-.34,4.57-.43a1.74,1.74,0,0,0-1-1.64,8.21,8.21,0,0,0-3.4-.54,10.24,10.24,0,0,0-2.9.48c-1,.33-1.79.58-2.25.76h-.85V19.82h.19c.6-.15,1.56-.34,2.92-.55a26.15,26.15,0,0,1,4.05-.35c3.24,0,5.62.51,7.07,1.52A5.5,5.5,0,0,1,78.21,25.28Zm17.86,0h-.74a5.91,5.91,0,0,0-1.18-.18c-.52,0-1-.07-1.3-.07a13.16,13.16,0,0,0-2.08.16,12.24,12.24,0,0,0-1.78.46V37.43H82.86v-18H89v2.3a11.09,11.09,0,0,1,2.91-1.81,7.29,7.29,0,0,1,2.61-.54h.68l.67.05h.22Zm9.05,7.17a6.83,6.83,0,0,0,4.11,1,9.39,9.39,0,0,0,3.36-.62,10.91,10.91,0,0,0,2.58-1.34l.07-.05h1v4.93l-.15.06a22.18,22.18,0,0,1-3.64,1.12,19.2,19.2,0,0,1-3.78.35c-3.57,0-6.34-.82-8.26-2.43a8.67,8.67,0,0,1-2.9-7,9.35,9.35,0,0,1,2.75-7.06,10.39,10.39,0,0,1,7.47-2.61c2.91,0,5.13.76,6.61,2.24a8.75,8.75,0,0,1,2.23,6.4l0,2.3H103.67A3.65,3.65,0,0,0,105.12,32.41ZM152.9,45.92V33.13h4.73l1.18-5.91H152.9V24.86q0-3.54,3.54-3.54h2.37V15.41h-4.73c-4.34,0-7.08,3.4-7.08,8.27v3.54h-4.7v5.91H147V47.24c-.4,0-.79.06-1.19.06a18.92,18.92,0,1,1,7.06-1.38Zm39.48,1.39h0a18.9,18.9,0,1,1,18.9-18.9A18.9,18.9,0,0,1,192.35,47.32Zm48.05-15.74H232.1v8.25h-4.78V31.57H219V26.92h8.32V18.67h4.78v8.25h8.33Zm43.12,6.09a18.86,18.86,0,0,1-25.68,7.2l-9.69,2.5,2.64-9.4a18.87,18.87,0,1,1,32.73-.3Z" transform="translate(0 0)"></path></svg>    
+              <svg id="defaultSVG" style="display: block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.62 56.81"><defs></defs><path class="a" d="M273.81,28.08a10.1,10.1,0,0,0-3-1.38L269.59,32a1.76,1.76,0,0,1-1,1.29,6.26,6.26,0,0,1-2.74.42,10.55,10.55,0,0,1-2.31-.25,11.26,11.26,0,0,1-1.89-.61,7.3,7.3,0,0,1-1.45-.73,7.56,7.56,0,0,1-.85-.64h-.85l-1.17,5,.17.08a14,14,0,0,0,3.29,1c.58.11,1.18.19,1.78.26l-.85,3.67h5.66l.86-3.73a11.57,11.57,0,0,0,4.35-1.51,5.48,5.48,0,0,0,2.79-4.83A3.84,3.84,0,0,0,273.81,28.08Z" transform="translate(0 0)"></path><path class="a" d="M107.23,22.85a3.87,3.87,0,0,0-2.52.79,3.28,3.28,0,0,0-1.06,2.27h6.77a3.51,3.51,0,0,0-.8-2.24A3.14,3.14,0,0,0,107.23,22.85Z" transform="translate(0 0)"></path><path class="a" d="M273.76,19.32c-.41-.09-.83-.14-1.24-.19l.86-3.73h-5.66l-.82,3.72a11.3,11.3,0,0,0-4.39,1.54,5.53,5.53,0,0,0-2.77,4.88,4,4,0,0,0,1.4,3.09,8.94,8.94,0,0,0,3.2,1.57l1.13-4.9a7.08,7.08,0,0,1,.22-.75,1.54,1.54,0,0,1,.86-1,6.51,6.51,0,0,1,2.66-.41,9.74,9.74,0,0,1,3.16.52A9,9,0,0,1,275,25h.81l1.12-4.79-.17-.08A12.91,12.91,0,0,0,273.76,19.32Z" transform="translate(0 0)"></path><path class="a" d="M202.24,19.61a9.21,9.21,0,0,1-2.77,1.14,4.14,4.14,0,0,0-3.09-1.46,4.47,4.47,0,0,0-4.32,4.61v0a4.69,4.69,0,0,0,.08,1.06,11.92,11.92,0,0,1-8.88-4.81,4.36,4.36,0,0,0-.57,2.37,4.6,4.6,0,0,0,1.87,3.82,3.85,3.85,0,0,1-1.95-.57v.12A4.67,4.67,0,0,0,186,30.48a4.9,4.9,0,0,1-1.14.16,2.76,2.76,0,0,1-.81-.08,4.22,4.22,0,0,0,4,3.18,8.37,8.37,0,0,1-5.3,2,5.35,5.35,0,0,1-1.06-.08,11.65,11.65,0,0,0,6.6,2.12c7.9,0,12.22-7,12.22-13.12v-.57a9.62,9.62,0,0,0,2.28-2.6,6.57,6.57,0,0,1-2.44.73A4.61,4.61,0,0,0,202.24,19.61Z" transform="translate(0 0)"></path><path class="a" d="M67.9,29.82a2.5,2.5,0,0,0-1.18.7,1.71,1.71,0,0,0-.39,1.17,2.83,2.83,0,0,0,.09.82,1.09,1.09,0,0,0,.39.53,1.94,1.94,0,0,0,.77.42,5.74,5.74,0,0,0,1.49.13,4.49,4.49,0,0,0,1.62-.32,5.2,5.2,0,0,0,1.37-.79V29.22c-.68.06-1.41.14-2.19.23A12,12,0,0,0,67.9,29.82Z" transform="translate(0 0)"></path><path class="a" d="M291.28,0H8.34A8.33,8.33,0,0,0,0,8.34V48.47a8.33,8.33,0,0,0,8.32,8.34h283a8.33,8.33,0,0,0,8.34-8.32V8.34A8.33,8.33,0,0,0,291.28,0ZM32.9,36.21a12,12,0,0,1-6.81,1.71,19.39,19.39,0,0,1-4.3-.45,16.21,16.21,0,0,1-3.12-1l-.14-.07v-5h.91c.27.19.6.41,1,.64a9.75,9.75,0,0,0,1.53.73,12.81,12.81,0,0,0,2,.61,10.06,10.06,0,0,0,2.32.25,6,6,0,0,0,2.35-.34.92.92,0,0,0,.65-.86.74.74,0,0,0-.35-.72,6,6,0,0,0-1.7-.53q-.63-.13-1.68-.3a19.65,19.65,0,0,1-2-.4,7.19,7.19,0,0,1-3.67-2A5.1,5.1,0,0,1,18.67,25a5.23,5.23,0,0,1,2.5-4.41,11.62,11.62,0,0,1,6.7-1.72,17.61,17.61,0,0,1,3.83.4,15.74,15.74,0,0,1,2.86.87l.15.06v4.85h-.87a11.45,11.45,0,0,0-2.79-1.36,9.7,9.7,0,0,0-3.16-.53,5.88,5.88,0,0,0-2.2.36c-.78.31-.78.7-.78.83a.89.89,0,0,0,.33.76,5.19,5.19,0,0,0,1.88.61l1.84.33c.66.11,1.34.25,2,.42a6.6,6.6,0,0,1,3.41,1.9,4.88,4.88,0,0,1,1.12,3.26A5.35,5.35,0,0,1,32.9,36.21Zm23.91-10.5V37.43H50.67v-9a18.17,18.17,0,0,0-.11-2.09,4.15,4.15,0,0,0-.34-1.47,1.72,1.72,0,0,0-.8-.73,4.25,4.25,0,0,0-1.58-.24,4.68,4.68,0,0,0-1.48.24,7.92,7.92,0,0,0-1.54.7V37.38H38.69V12.58h6.13V21a14.2,14.2,0,0,1,2.53-1.53,7.53,7.53,0,0,1,3.17-.64,6.15,6.15,0,0,1,4.62,1.73A7.08,7.08,0,0,1,56.81,25.71Zm21.4-.43,0,12.15H72.11V35.82l-.73.53a8.29,8.29,0,0,1-1.31.79,8.53,8.53,0,0,1-1.77.58,11.19,11.19,0,0,1-2,.18A6.24,6.24,0,0,1,62,36.29a5.43,5.43,0,0,1-1.77-4.14,5.6,5.6,0,0,1,.91-3.28,6,6,0,0,1,2.54-2,13.76,13.76,0,0,1,3.94-1c1.47-.19,3-.34,4.57-.43a1.74,1.74,0,0,0-1-1.64,8.21,8.21,0,0,0-3.4-.54,10.24,10.24,0,0,0-2.9.48c-1,.33-1.79.58-2.25.76h-.85V19.82h.19c.6-.15,1.56-.34,2.92-.55a26.15,26.15,0,0,1,4.05-.35c3.24,0,5.62.51,7.07,1.52A5.5,5.5,0,0,1,78.21,25.28Zm17.86,0h-.74a5.91,5.91,0,0,0-1.18-.18c-.52,0-1-.07-1.3-.07a13.16,13.16,0,0,0-2.08.16,12.24,12.24,0,0,0-1.78.46V37.43H82.86v-18H89v2.3a11.09,11.09,0,0,1,2.91-1.81,7.29,7.29,0,0,1,2.61-.54h.68l.67.05h.22Zm9.05,7.17a6.83,6.83,0,0,0,4.11,1,9.39,9.39,0,0,0,3.36-.62,10.91,10.91,0,0,0,2.58-1.34l.07-.05h1v4.93l-.15.06a22.18,22.18,0,0,1-3.64,1.12,19.2,19.2,0,0,1-3.78.35c-3.57,0-6.34-.82-8.26-2.43a8.67,8.67,0,0,1-2.9-7,9.35,9.35,0,0,1,2.75-7.06,10.39,10.39,0,0,1,7.47-2.61c2.91,0,5.13.76,6.61,2.24a8.75,8.75,0,0,1,2.23,6.4l0,2.3H103.67A3.65,3.65,0,0,0,105.12,32.41ZM152.9,45.92V33.13h4.73l1.18-5.91H152.9V24.86q0-3.54,3.54-3.54h2.37V15.41h-4.73c-4.34,0-7.08,3.4-7.08,8.27v3.54h-4.7v5.91H147V47.24c-.4,0-.79.06-1.19.06a18.92,18.92,0,1,1,7.06-1.38Zm39.48,1.39h0a18.9,18.9,0,1,1,18.9-18.9A18.9,18.9,0,0,1,192.35,47.32Zm48.05-15.74H232.1v8.25h-4.78V31.57H219V26.92h8.32V18.67h4.78v8.25h8.33Zm43.12,6.09a18.86,18.86,0,0,1-25.68,7.2l-9.69,2.5,2.64-9.4a18.87,18.87,0,1,1,32.73-.3Z" transform="translate(0 0)"></path></svg>
                 </a>
               </span>
               <!--

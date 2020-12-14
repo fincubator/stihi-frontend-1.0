@@ -4,7 +4,7 @@
       <div class="comment__inner">
         <div class="comment__left">
           <img class="avatar__avatar" src="{{o.user.avatar}}" alt="" *ngIf="o.user.avatar && o.user.avatar.length > 5">
-          <img class="avatar__avatar" src="/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!o.user.avatar || o.user.avatar.length < 5">
+          <img class="avatar__avatar" src="/assets/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!o.user.avatar || o.user.avatar.length < 5">
         </div>
         <div class="comment__right">
           <div class="comment__right-top">
@@ -20,7 +20,7 @@
                     <div class="user">
                       <div class="user__header">
                         <div [style.backgroundImage]="'url('+ o.user.avatar +')'" class="user__left" *ngIf="o.user.avatar && o.user.avatar.length > 5"></div>
-                        <div [style.backgroundImage]="'url(/frontend_assets_stihi/img/avatar_default.png)'" class="user__left" *ngIf="!o.user.avatar || o.user.avatar.length < 5"></div>
+                        <div [style.backgroundImage]="'url(/assets/frontend_assets_stihi/img/avatar_default.png)'" class="user__left" *ngIf="!o.user.avatar || o.user.avatar.length < 5"></div>
 
                         <div class="user__right">
                           <div class="user__right-name"><a routerLink="/@{{o.displayNameBlog}}" class="user__right-id" style="color: #3b363d;text-decoration: none;font-size: 14px;font-weight: 600;">
@@ -59,7 +59,7 @@
             </div>
             <div class="post__right-block">
               <button class="post__block"  *ngIf="userRole == 'a'" (click)="banContent(o.id)">
-                <img src="/frontend_assets_stihi/img/remove.png" alt="">
+                <img src="/assets/frontend_assets_stihi/img/remove.png" alt="">
               </button>
 
               <div class="popup-page__flag" *ngIf="TODO">

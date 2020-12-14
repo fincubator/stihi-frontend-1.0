@@ -3,7 +3,7 @@
   <div class="user-banner">
     <div class="user-banner__top">
       <div *ngIf="!isLoading && object.background_image && object.background_image.length > 5" [style.backgroundImage]="'url('+ object.background_image +')'" class="user-banner__background"></div>
-      <div *ngIf="!isLoading && !object.background_image || object.background_image.length < 5"  [style.backgroundImage]="'url(/frontend_assets_stihi/img/banner.jpg)'" class="user-banner__background"></div>
+      <div *ngIf="!isLoading && !object.background_image || object.background_image.length < 5"  [style.backgroundImage]="'url(/assets/frontend_assets_stihi/img/banner.jpg)'" class="user-banner__background"></div>
       <div *ngIf="isLoading"  class="user-banner__background"></div>
 
       <div class="user-banner__row">
@@ -11,7 +11,7 @@
           <div class="user-banner__small-col">
             <div class="user-banner__img-wrap">
               <img class="user-banner__img" src="{{object.avatar}}" alt="" *ngIf="object.avatar && object.avatar.length > 5">
-              <img class="user-banner__img" src="/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!object.avatar || object.avatar.length < 5">
+              <img class="user-banner__img" src="/assets/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!object.avatar || object.avatar.length < 5">
             </div>
           </div>
           <div class="user-banner__large-col user-banner__large-col--self-end">
@@ -25,7 +25,7 @@
             <!-- /VALUE -->
           </div>
 			<button class="user-banner__block-btn" *ngIf="userRole == 'a'" (click)="blockUser(object)">
-	          <img src="/frontend_assets_stihi/img/remove.png" alt="">
+	          <img src="/assets/frontend_assets_stihi/img/remove.png" alt="">
 	        </button>
         </div>
       </div>

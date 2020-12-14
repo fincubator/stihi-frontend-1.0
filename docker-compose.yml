@@ -6,19 +6,23 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    network_mode: host
+    #network_mode: host
     restart: always
-    ports: 
+    ports:
     - "4200:4200"
     command: ["npm","start"]
 
   nginx:
     image: nginx:1.19.1-perl
-    network_mode: host
+    #network_mode: host
     restart: always
     ports:
     - "80:80"
+    depends_on:
+      - stihi-front
     volumes:
       - ./build/nginx-default.conf:/etc/nginx/conf.d/default.conf
       - ./build:/var/www/stihi.io/public
 
+networks:
+  default:

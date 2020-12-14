@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {PostsService} from "../../posts/posts.service";
 import {HeaderService} from "../services/header.service";
 
-import * as MobileEditor from '@ckeditor/ckeditor5-build-inline-mobile';
+import * as MobileEditor from '@ckeditor/ckeditor5-build-inline';
 
 declare var jquery:any;
 declare var $ :any;

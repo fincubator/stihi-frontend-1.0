@@ -24,7 +24,7 @@
     <div class="box-white__form">
       <!-- FORM -->
       <div class="form">
- 
+
         <div style="display:inline-block;border-radius: 4px;border: thin solid #98929a;padding-top:8px; padding-bottom: 2px;margin-right: 40px;"  class="image_editor_form">
       	<div style="display: inline-block;height: 90px!important;overflow: hidden;">
           <div style="display: flex;justify-content: center;align-content: center;flex-direction: column;width: 260px; height: 90px!important; overflow: hiden!important;cursor: pointer;" class="postImageContainer" (click)="focusPostImageField()">
@@ -50,7 +50,7 @@
         <div class="form__input" style="margin: 0px">
           <!-- /INPUT -->
           <div class="form__field-right">
-        	<div (click)="object.content.isShowPreview = !object.content.isShowPreview" *ngIf="object.content.input_mode" class="editor_preview_button"><img src="/frontend_assets_stihi/img/eye.png" style="vertical-align: bottom"> <a href="javascript:void(0)" class="form__field-right-a" style="display: inline-block;width: 120px;text-align: left;">
+        	<div (click)="object.content.isShowPreview = !object.content.isShowPreview" *ngIf="object.content.input_mode" class="editor_preview_button"><img src="/assets/frontend_assets_stihi/img/eye.png" style="vertical-align: bottom"> <a href="javascript:void(0)" class="form__field-right-a" style="display: inline-block;width: 120px;text-align: left;">
             <ng-container *ngIf="!object.content.isShowPreview">Просмотреть
             </ng-container>
             <ng-container *ngIf="object.content.isShowPreview">Маркдаун
@@ -85,7 +85,7 @@
                     </div>
                     </ng-container>
                   </div>
-                </div>                
+                </div>
               </ng-container>
 
               <ng-container *ngIf="isEditorReady && !isMobile">

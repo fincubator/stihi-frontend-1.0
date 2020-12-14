@@ -6,7 +6,7 @@
         <div class="header__left">
           <!-- LOGO -->
           <a class="logo" routerLink="/">
-            <img class="logo__img" src="/frontend_assets_stihi/svg/logo.svg" alt="">
+            <img class="logo__img" src="/assets/frontend_assets_stihi/svg/logo.svg" alt="">
           </a>
           <!-- /LOGO -->
         </div>
@@ -24,7 +24,7 @@
               <div class="user-panel__left" *ngIf="userId > 0">
                 <div class="user-panel__left-top">
                   <div class="user-panel__name">{{user.displayName}}</div>
-                  
+
                   <div class="ui dropdown pointing top right header__main-menu header__main-menu-bell"  *ngIf="false || TODO">
                     <!-- BELL BTN -->
                     <button class="default bell-btn bell-btn--notification">
@@ -76,7 +76,7 @@
                   <!-- AVATAR -->
                   <div class="avatar default">
                     <img class="avatar__avatar" src="{{user.avatar}}" alt="" *ngIf="user.avatar && user.avatar.length > 5">
-                    <img class="avatar__avatar" src="/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!user.avatar || user.avatar.length < 5">
+                    <img class="avatar__avatar" src="/assets/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!user.avatar || user.avatar.length < 5">
                   </div>
                   <!-- /AVATAR -->
                   <div class="menu av avatar-menu__menu">
@@ -293,7 +293,7 @@
       <!-- /BTN DEFAULT -->
     </div>
     </div>
-  </div>  
+  </div>
   <ng-container *ngIf="!isRegChoice">
     <div class="popup-small__header">
       <div class="popup-small__title">Регистрация</div>
@@ -419,9 +419,9 @@
           <!-- /BTN SECONDARY -->
           </div>
         </div>
-    </div>  
+    </div>
   </ng-container>
-  
+
 </div>
 </form>
 

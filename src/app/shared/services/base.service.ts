@@ -25,7 +25,7 @@ export abstract class BaseService {
     protected apiUrl: string,
     protected apiRoot?: string,
   ) {
-    if (!apiRoot) this.apiRoot = "/api/v2/";
+    if (!apiRoot) this.apiRoot = "http://31.184.218.124:9001/api/v2/";
 
     this.apiUrl = this.apiRoot + this.apiUrl;
   }
@@ -181,22 +181,22 @@ export abstract class BaseService {
 		let ORCA = 1000000000;
 
 		if (gests < 0) {
-			return '/frontend_assets_stihi/img/fish5.svg';
+			return '/assets/frontend_assets_stihi/img/fish5.svg';
 		}
 		if (gests < MINNOW) {
-			return '/frontend_assets_stihi/img/fish5.svg';
+			return '/assets/frontend_assets_stihi/img/fish5.svg';
 		}
 		if (gests < CRUCIAN) {
-			return '/frontend_assets_stihi/img/fish3.svg';
+			return '/assets/frontend_assets_stihi/img/fish3.svg';
 		}
 		if (gests < DOLPHIN) {
-			return '/frontend_assets_stihi/img/fish1.svg';
+			return '/assets/frontend_assets_stihi/img/fish1.svg';
 		}
 		if (gests < ORCA) {
-			return '/frontend_assets_stihi/img/fish2.svg';
+			return '/assets/frontend_assets_stihi/img/fish2.svg';
 		}
 
-		return '/frontend_assets_stihi/img/fish4.svg';
+		return '/assets/frontend_assets_stihi/img/fish4.svg';
     }
 
     return '';
@@ -225,13 +225,13 @@ export abstract class BaseService {
     if (type == 'image') {
       value = Math.round(Number(value)/1000000);
 
-      let fish = '/frontend_assets_stihi/img/fish5.svg';
+      let fish = '/assets/frontend_assets_stihi/img/fish5.svg';
 
-      if (value >= 0) fish = '/frontend_assets_stihi/img/fish5.svg';
-      if (value >= 1000) fish = '/frontend_assets_stihi/img/fish3.svg';
-      if (value >= 10000) fish = '/frontend_assets_stihi/img/fish1.svg';
-      if (value >= 100000) fish = '/frontend_assets_stihi/img/fish2.svg';
-      if (value >= 1000000) fish = '/frontend_assets_stihi/img/fish4.svg';
+      if (value >= 0) fish = '/assets/frontend_assets_stihi/img/fish5.svg';
+      if (value >= 1000) fish = '/assets/frontend_assets_stihi/img/fish3.svg';
+      if (value >= 10000) fish = '/assets/frontend_assets_stihi/img/fish1.svg';
+      if (value >= 100000) fish = '/assets/frontend_assets_stihi/img/fish2.svg';
+      if (value >= 1000000) fish = '/assets/frontend_assets_stihi/img/fish4.svg';
 
       return fish;
     }
@@ -271,8 +271,8 @@ export abstract class BaseService {
       if (data[k]) user[k] = data[k];
     }
 
-    if (!user.avatar_image) user.avatar_image = '/frontend_assets_stihi/img/avatar_default.png';
-    if (!user.background_image) user.background_image = '/frontend_assets_stihi/img/banner.jpg';
+    if (!user.avatar_image) user.avatar_image = '/assets/frontend_assets_stihi/img/avatar_default.png';
+    if (!user.background_image) user.background_image = '/assets/frontend_assets_stihi/img/banner.jpg';
 
     user.displayName = this.getUserDisplayName(user);
 

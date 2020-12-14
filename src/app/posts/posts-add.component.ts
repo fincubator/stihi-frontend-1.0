@@ -4,7 +4,7 @@ import { PostsService } from '../posts/posts.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-inline';
-import * as MobileEditor from '@ckeditor/ckeditor5-build-inline-mobile';
+import * as MobileEditor from '@ckeditor/ckeditor5-build-inline';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -103,7 +103,7 @@ export class PostsAddComponent implements OnInit {
   }
 
   focusPostImageField() {
-     this.editorImageField.editing.view.focus();    
+     this.editorImageField.editing.view.focus();
   }
 
   onResize(event) {
@@ -152,7 +152,7 @@ export class PostsAddComponent implements OnInit {
         )
         + parseFloat($('.post_form_content_container').css('margin-left'))
       );
-    }  
+    }
   }
 
   savePost(id: number) {
@@ -426,7 +426,7 @@ export class PostsAddComponent implements OnInit {
     this.audio.volume = 0.5;
 		this.audio.pause();
 		this.audio.currentTime = 0;
-		this.audio.play();      
+		this.audio.play();
     }
   }
 }

@@ -7,6 +7,7 @@ import { HeaderService } from '../services/header.service';
 
 import { Router, ActivatedRoute, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized } from '@angular/router';
 import {PostsService} from "../../posts/posts.service";
+import {environment} from "../../../environments/environment";
 
 declare var jquery:any;
 declare var $ :any;
@@ -128,13 +129,22 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
 		if (element.attr) {
 		  if (element.attr('class')) elementClass = element.attr('class');
-		  if (element.prop('href')) elementHref = element.prop('href');        
+		  if (element.prop('href')) elementHref = element.prop('href');
 		} else {
 		  elementClass = element.className;
-		  elementHref = element.href;          
+		  elementHref = element.href;
 		}
 
-		if (window.location.href.indexOf('external_link_warning') == -1 && elementHref.indexOf('stihi.io') == -1 && elementHref.indexOf(':8080') == -1 && elementHref.indexOf('javascript:') == -1 && elementHref.length > 2 && elementClass.indexOf('ck-link_selected') == -1 && elementClass.indexOf('k-link-actions__preview') == -1) {
+		if (
+      environment.production && (
+        window.location.href.indexOf('external_link_warning') == -1 &&
+        elementHref.indexOf('stihi.io') == -1 &&
+        elementHref.indexOf(':8080') == -1 &&
+        elementHref.indexOf('javascript:') == -1 &&
+        elementHref.length > 2 && elementClass.indexOf('ck-link_selected') == -1 &&
+        elementClass.indexOf('k-link-actions__preview') == -1
+      )
+    ) {
 			e.preventDefault();
 
 		    this.router.navigate(['/external_link_warning'], { queryParams: { returnLink: window.location.pathname, targetLink: elementHref} });
@@ -204,7 +214,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.router.navigate(['/']);
 
     setTimeout(() => {
-      window.location.reload();    
+      window.location.reload();
     }, 300);
   }
 
@@ -331,7 +341,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
                   this.router.navigate(['/@'+this.postsService.getUserLogin(user)]);
 
                   setTimeout(() => {
-                    window.location.reload();                  
+                    window.location.reload();
                   }, 300);
                 });
 
@@ -389,8 +399,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         items: {
             src: '#p-reg',
         },
-        closeOnContentClick : false, 
-        closeOnBgClick :false, 
+        closeOnContentClick : false,
+        closeOnBgClick :false,
 
     });
   }

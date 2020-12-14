@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0 --disable-host-check --base-href /appdev/ --live-reload=false",
+    "start": "ng serve --host 0.0.0.0 --disable-host-check --c /appdev/ --live-reload=true",
     "build": "node --stack_size=4048 node_modules/.bin/ng build --prod",
     "test": "ng test",
     "lint": "ng lint",

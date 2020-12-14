@@ -167,7 +167,7 @@
                     <div class="avatar">
 
                       <ng-container *ngIf="!leader.user.avatar || leader.user.avatar.length < 3">
-                        <img class="avatar__avatar" src="/frontend_assets_stihi/img/avatar_default.png" alt="">
+                        <img class="avatar__avatar" src="/assets/frontend_assets_stihi/img/avatar_default.png" alt="">
                       </ng-container>
 
                       <ng-container *ngIf="leader.user.avatar && leader.user.avatar.length > 3">
@@ -267,7 +267,7 @@
                   <div class="avatar avatar--avatar-img-max-width6">
 
                     <img class="avatar__avatar" src="{{o.author.avatar}}" alt="" *ngIf="o.author.avatar && o.author.avatar.length > 5">
-                    <img class="avatar__avatar" src="/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!o.author.avatar || o.author.avatar.length < 5">
+                    <img class="avatar__avatar" src="/assets/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!o.author.avatar || o.author.avatar.length < 5">
 
                     <div class="avatar__user-right">
                       <div class="avatar__avatar-name">{{o.author.displayName}}</div>
@@ -315,7 +315,7 @@
                   <!-- AVATAR -->
                   <div class="avatar avatar--avatar-img-max-width6 avatar--display-iBlock">
                     <img class="avatar__avatar" src="{{o.avatar}}" alt="" *ngIf="o.avatar && o.avatar.length > 5">
-                    <img class="avatar__avatar" src="/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!o.avatar || o.avatar.length < 5">
+                    <img class="avatar__avatar" src="/assets/frontend_assets_stihi/img/avatar_default.png" alt="" *ngIf="!o.avatar || o.avatar.length < 5">
 
                     <div class="avatar__bottom">
                       <span class="avatar__name">{{o.displayName}}</span>

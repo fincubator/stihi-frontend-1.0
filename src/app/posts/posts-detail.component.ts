@@ -11,7 +11,7 @@ import { Meta } from '@angular/platform-browser';
 import { Title } from '@angular/platform-browser';
 
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-inline';
-import * as MobileEditor from '@ckeditor/ckeditor5-build-inline-mobile';
+import * as MobileEditor from '@ckeditor/ckeditor5-build-inline';
 
 declare var jquery:any;
 declare var $ :any;
@@ -87,7 +87,7 @@ export class PostsDetailComponent {
   txt = '';
 
   focusPostImageField() {
-     this.editorImageField.editing.view.focus();    
+     this.editorImageField.editing.view.focus();
   }
 
   percentages = [];
@@ -208,7 +208,7 @@ export class PostsDetailComponent {
     setTimeout(() => {
       this.resizeEditorBar();
     }, 50);
-  }  
+  }
 
   resizeEditorBar() {
     /*
@@ -225,7 +225,7 @@ export class PostsDetailComponent {
           $($('.ck-balloon-panel_toolbar_west')[editorBarIndex]).position().left + $($('.ck-balloon-panel_toolbar_west')[editorBarIndex]).css('margin-left').replace('px', '')
         )
       );
-    }  
+    }
     */
   }
 
@@ -295,7 +295,7 @@ export class PostsDetailComponent {
 	private ref: ChangeDetectorRef,
   ) {
     this.subscription = headerService.postChanged$.subscribe(
-      data => {      
+      data => {
         this.resetPost();
 
         this.param_leaderTimeText = '';
@@ -361,8 +361,8 @@ export class PostsDetailComponent {
       desc_order = false;
       blog_user_id = this.auId;
 
-      uri_title = 'ленте';            	
-    } 
+      uri_title = 'ленте';
+    }
 
     if (s.indexOf('/posts/feed') > -1) {
       uri = 'follow';
@@ -599,10 +599,10 @@ export class PostsDetailComponent {
     if (isNaN(this.id)) return;
 
     $('body').removeClass('large-editor');
-    
+
     this.isEditorReady = true;
 
-    if (this.object.user && this.object.user.avatar) this.object.user.avatar = '/frontend_assets_stihi/img/avatar_default.png';
+    if (this.object.user && this.object.user.avatar) this.object.user.avatar = '/assets/frontend_assets_stihi/img/avatar_default.png';
 
     this.user = this.postsService.getSession();
     if (this.user && this.user.n) this.auName = this.user.n;
@@ -616,7 +616,7 @@ export class PostsDetailComponent {
 
     this.load();
     this.getCategories();
-  
+
     this.headerService.setSharpayUrl();
   }
 
@@ -780,7 +780,7 @@ export class PostsDetailComponent {
       });
   }
 
-  load() {  	  
+  load() {
     this.object.is_saving = false;
 
     this.sharpayImage = '';
@@ -863,7 +863,7 @@ export class PostsDetailComponent {
               }
           } while (m);
 
-          if (results.length > 0) this.sharpayImage = results[0];        
+          if (results.length > 0) this.sharpayImage = results[0];
         }
 
         this.postsService.getSharpayShareCount({"url": window.location.href})
@@ -951,7 +951,7 @@ export class PostsDetailComponent {
         this.postsService.processJWT(data);
 
 		setTimeout(function(){
-			$('[name="object_title"]').height(20);$('[name="object_title"]').height($('[name="object_title"]').prop('scrollHeight'));		
+			$('[name="object_title"]').height(20);$('[name="object_title"]').height($('[name="object_title"]').prop('scrollHeight'));
 		}, 200);
       });
   }
@@ -1087,7 +1087,7 @@ export class PostsDetailComponent {
 
         this.postsService.processJWT(data);
 
-        this.headerService.eventPostEdited({id: this.object.id});        
+        this.headerService.eventPostEdited({id: this.object.id});
 
         this.headerService.eventPostListChanged({noscroll: true});
 
